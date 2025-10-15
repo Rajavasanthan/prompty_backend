@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "33b8c84b-4767-466b-82f2-db127ae7725e",
+		"name": "Prompty",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "780079"
+	},
+	"item": [
+		{
+			"name": "Get Particular Prompt",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGVmYTFmNDc5MGFkNWZhOWExZmQxNDkiLCJpYXQiOjE3NjA1MzYxMTQsImV4cCI6MTc2MDYyMjUxNH0.zMcF2vtjySS_aJLhpq6FPlJYRG94Q7TEtspLZvhc1qA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/prompt/get-prompt/68efa81e9a4809cbdcf4fae2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prompt",
+						"get-prompt",
+						"68efa81e9a4809cbdcf4fae2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Prompt",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGVmYTFmNDc5MGFkNWZhOWExZmQxNDkiLCJpYXQiOjE3NjA1MzYxMTQsImV4cCI6MTc2MDYyMjUxNH0.zMcF2vtjySS_aJLhpq6FPlJYRG94Q7TEtspLZvhc1qA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"New Image Generation\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/prompt/edit/68efa81e9a4809cbdcf4fae2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prompt",
+						"edit",
+						"68efa81e9a4809cbdcf4fae2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Prompt",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGVmYTFmNDc5MGFkNWZhOWExZmQxNDkiLCJpYXQiOjE3NjA1MzYxMTQsImV4cCI6MTc2MDYyMjUxNH0.zMcF2vtjySS_aJLhpq6FPlJYRG94Q7TEtspLZvhc1qA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"New Image Generation\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/prompt/delete/68efa81e9a4809cbdcf4fae2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prompt",
+						"delete",
+						"68efa81e9a4809cbdcf4fae2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my Prompts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGVmYTFmNDc5MGFkNWZhOWExZmQxNDkiLCJpYXQiOjE3NjA1MzYxMTQsImV4cCI6MTc2MDYyMjUxNH0.zMcF2vtjySS_aJLhpq6FPlJYRG94Q7TEtspLZvhc1qA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/prompt/get-my-prompts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prompt",
+						"get-my-prompts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Prompts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGVmYTFmNDc5MGFkNWZhOWExZmQxNDkiLCJpYXQiOjE3NjA1MzYxMTQsImV4cCI6MTc2MDYyMjUxNH0.zMcF2vtjySS_aJLhpq6FPlJYRG94Q7TEtspLZvhc1qA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/prompt/search-prompts?search=g",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prompt",
+						"search-prompts"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "g"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Prompts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGVmYTFmNDc5MGFkNWZhOWExZmQxNDkiLCJpYXQiOjE3NjA1MzYxMTQsImV4cCI6MTc2MDYyMjUxNH0.zMcF2vtjySS_aJLhpq6FPlJYRG94Q7TEtspLZvhc1qA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGVmYTFmNDc5MGFkNWZhOWExZmQxNDkiLCJpYXQiOjE3NjA1MzYxMTQsImV4cCI6MTc2MDYyMjUxNH0.zMcF2vtjySS_aJLhpq6FPlJYRG94Q7TEtspLZvhc1qA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/prompt/get-all-prompts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prompt",
+						"get-all-prompts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Prompt",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGVmYTFmNDc5MGFkNWZhOWExZmQxNDkiLCJpYXQiOjE3NjA1MzYxMTQsImV4cCI6MTc2MDYyMjUxNH0.zMcF2vtjySS_aJLhpq6FPlJYRG94Q7TEtspLZvhc1qA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"Image Generation\",\n    \"prompt\" : \"Generate a image...\",\n    \"imageUrls\" : [\n        \"https://image.com/1\",\n        \"https://image.com/1\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/prompt/create-prompt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prompt",
+						"create-prompt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"vasanth@gmail.com\",\n    \"password\" : \"admin123\",\n    \"name\" : \"Vasanth\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"vasanth@gmail.com\",\n    \"password\" : \"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
