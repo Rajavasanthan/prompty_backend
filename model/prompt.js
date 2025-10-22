@@ -14,6 +14,11 @@ const PromptSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  platform: {
+    type: String,
+    required: true,
+    enum: ["nano_banana", "chat_gpt"],
+  },
   imageUrls: [
     {
       type: String,

@@ -5,7 +5,11 @@ var router = express.Router();
 /* GET users listing. */
 router.get("/get-all-prompts", async function (req, res, next) {
   try {
-    const prompts = await Prompt.find();
+    const prompts = await Prompt.find({
+      userId: {
+        $ne: req.userId,
+      },
+    });
     return res.json(prompts);
   } catch (error) {
     return res.status(500).json({
@@ -17,12 +21,21 @@ router.get("/get-all-prompts", async function (req, res, next) {
 router.get("/search-prompts", async function (req, res, next) {
   try {
     const prompts = await Prompt.find({
-      $or: [
+      $and: [
         {
-          title: { $regex: req.query.search, $options: "i" },
+          userId: {
+            $ne: req.userId,
+          },
         },
         {
-          prompt: { $regex: req.query.search, $options: "i" },
+          $or: [
+            {
+              title: { $regex: req.query.search, $options: "i" },
+            },
+            {
+              prompt: { $regex: req.query.search, $options: "i" },
+            },
+          ],
         },
       ],
     });
@@ -51,6 +64,7 @@ router.post("/create-prompt", async function (req, res, next) {
       prompt: req.body.prompt,
       imageUrls: req.body.imageUrls,
       title: req.body.title,
+      platform: req.body.platform,
     });
     await prompt.save();
     return res.json(prompt);

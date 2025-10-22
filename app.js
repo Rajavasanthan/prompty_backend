@@ -4,6 +4,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
+const cors = require("cors");
 
 function authenticate(req, res, next) {
   const authHeader = req.headers["authorization"];
@@ -31,6 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(cors({ origin: "*" }))
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
